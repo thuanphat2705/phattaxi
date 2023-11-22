@@ -13,7 +13,7 @@ gen64() {
 }
 install_3proxy() {
     echo "installing 3proxy"
-    URL="https://github.com/thuanphat2705/phattaxi/blob/main/3proxy-3proxy-0.8.6.tar.gz"
+    URL="https://raw.githubusercontent.com/ngochoaitn/multi_proxy_ipv6/main/3proxy-3proxy-0.8.6.tar.gz"
     wget -qO- $URL | bsdtar -xvf-
     cd 3proxy-3proxy-0.8.6
     make -f Makefile.Linux
@@ -54,7 +54,7 @@ EOF
 upload_proxy() {
     local PASS=$(random)
     zip --password $PASS proxy.zip proxy.txt
-    URL=$(curl -s --upload-file proxy.zip https://drive.google.com/drive/folders/1a4yL-zvdwiJhr9j0NzhwBmuPvv3P3fBo?usp=sharing)
+    URL=$(curl -s --upload-file proxy.zip https://drive.google.com/drive/folders/1a4yL-zvdwiJhr9j0NzhwBmuPvv3P3fBo?usp=sharing/proxy.zip)
 
     echo "Proxy is ready! Format IP:PORT:LOGIN:PASS"
     echo "Download zip archive from: ${URL}"
