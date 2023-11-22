@@ -54,7 +54,7 @@ EOF
 upload_proxy() {
     local PASS=$(random)
     zip --password $PASS proxy.zip proxy.txt
-    URL=$(curl -s --upload-file proxy.zip https://drive.google.com/drive/folders/1a4yL-zvdwiJhr9j0NzhwBmuPvv3P3fBo?usp=sharing)
+    URL=$(curl -s --upload-file proxy.zip https://transfer.sh/proxyv6.zip)
 
     echo "Proxy is ready! Format IP:PORT:LOGIN:PASS"
     echo "Download zip archive from: ${URL}"
